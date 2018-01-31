@@ -6,9 +6,10 @@ package calculadora;
  * @author Kevin Macario 17369
  * @version 01.02.2018
  * Stack
+ * @param <E>
  */
 
-public interface Stack<E> 
+public interface Stack <E> 
 {
 
    public void push(E item);
