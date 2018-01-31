@@ -1,5 +1,7 @@
 
 package calculadora;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 /**
  * @author Rodrigo Urrutia 16139
@@ -11,7 +13,21 @@ package calculadora;
 public class MainCalculadora {
     
     public static void main(String[] args){
-  //comentario
+ 
+        try{
+            FileReader fr = new FileReader("datos.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String linea;
+            
+            while((linea = br.readLine())!=null){
+                System.out.println(""+linea);
+            }
+            
+        }
+        catch(Exception ex){
+            
+        }
+        
     }
     
 }
