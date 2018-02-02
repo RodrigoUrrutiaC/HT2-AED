@@ -9,16 +9,19 @@ import java.util.Vector;
  * @author Rodrigo Urrutia 16139
  * @author Kevin Macario 17369
  * @version 01.02.2018
- * MainCalculadora
  */
 
+/**
+ * MainCalculadora
+ * interfaz en donde el usuario interaciona con el programa
+ */
 public class MainCalculadora extends StackVector {
         
     public static void main(String[] args){
- 
+        //declaracion de stack y calculadora
         Stack<String> baraja = new StackArrayList<String>();
         Calculadora c = new Calculadora(baraja);
-        
+        //try y catch para leer un archixo txt de nombre "datos", debe de estar en la misma ruta que el programa calculadora
         try{
           
             FileReader fr = new FileReader("datos.txt");
@@ -31,8 +34,9 @@ public class MainCalculadora extends StackVector {
            }
             
         }
+        //si no logra leer el archivo o no lo encuentra muestra una alerta
         catch(Exception ex){
-            
+            System.out.print("No se encontro ningun archivo compatible");
         }  
          
     }

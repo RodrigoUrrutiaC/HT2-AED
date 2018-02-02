@@ -8,9 +8,12 @@ import java.util.ArrayList;
  * @author Rodrigo Urrutia 16139
  * @author Kevin Macario 17369
  * @version 01.02.2018
- * Calculadora
  */
 
+/**
+ * Calculadora
+ *Clase que implementa la interfaz de calculadora
+ */
 public class Calculadora implements CalculadoraI{
 
     Stack<String> baraja;
@@ -21,15 +24,19 @@ public class Calculadora implements CalculadoraI{
 	public Calculadora(Stack baraja) {
 		this.baraja=baraja;
 	}
+        /**
+         * metodo implementado de la clase CalculadoraI, reliza las operaciones y separaciones de escritura tipo postfix
+         * @param exp, linea con escritura postfix
+         * @return resultado de la operacion
+         */
     @Override
-    
     public String calcular(String exp) {
         
         
         char j;
         String respuesta = "", k;
         int t=0, ans=0, p=0;
-        
+        //ciclo que define que operacion se debe realizar
         for(int i=0; i< exp.length(); i++){
            
            j = exp.charAt(i);
