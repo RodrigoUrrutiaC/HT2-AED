@@ -19,7 +19,7 @@ public class MainCalculadora extends StackVector {
         
     public static void main(String[] args){
         //declaracion de stack y calculadora
-        Stack<String> baraja = new StackArrayList<String>();
+        Stack<String> baraja = new StackVector<>();
         Calculadora c = new Calculadora(baraja);
         //try y catch para leer un archixo txt de nombre "datos", debe de estar en la misma ruta que el programa calculadora
         try{
@@ -36,7 +36,7 @@ public class MainCalculadora extends StackVector {
         }
         //si no logra leer el archivo o no lo encuentra muestra una alerta
         catch(Exception ex){
-            System.out.print("No se encontro ningun archivo compatible");
+            System.out.print("INCAPACIDAD PARA LEER EL ARCHIVO .TXT");
         }  
          
     }

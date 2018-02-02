@@ -1,9 +1,6 @@
 
 package calculadora;
 
-import java.util.ArrayList;
-
-
 /**
  * @author Rodrigo Urrutia 16139
  * @author Kevin Macario 17369
@@ -34,10 +31,14 @@ public class Calculadora implements CalculadoraI{
         
         
         char j;
-        String respuesta = "", k;
-        int t=0, ans=0, p=0;
+        String respuesta, k;
+        int t, ans, p;
         //ciclo que define que operacion se debe realizar
-        for(int i=0; i< exp.length(); i++){
+        
+        //try y catch para realizar los calculos indicados por el string. Retorna MATH ERROR si se ingresa algun caracter
+        //no valido o si se da la division entre cero
+        try{
+            for(int i=0; i< exp.length(); i++){
            
            j = exp.charAt(i);
            k = Character.toString(j);
@@ -45,10 +46,7 @@ public class Calculadora implements CalculadoraI{
            if (Character.isDigit(j)){
                baraja.push(k);
            }
-           else if (Character.isLetter(j)){
-               respuesta="ERROR. No es posible operar letras";
-               break;
-           }
+           
            else {
 
                 switch (k) {
@@ -97,6 +95,12 @@ public class Calculadora implements CalculadoraI{
             
         return respuesta;
               
+        }
+        
+        catch(Exception e){
+            return "MATH ERROR";
+        }  
+        
     }
 
  }
