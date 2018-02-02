@@ -16,7 +16,6 @@ public class Calculadora implements CalculadoraI{
     Stack<String> baraja;
     /**
      * Constructor de Calculadora con parametros
-     * @param baraja
      */
 	public Calculadora() {
 		baraja = new StackVector();
