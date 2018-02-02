@@ -19,8 +19,8 @@ public class MainCalculadora extends StackVector {
         
     public static void main(String[] args){
         //declaracion de stack y calculadora
-        Stack<String> baraja = new StackVector<>();
-        Calculadora c = new Calculadora(baraja);
+     
+        Calculadora c = new Calculadora();
         //try y catch para leer un archixo txt de nombre "datos", debe de estar en la misma ruta que el programa calculadora
         try{
           

@@ -18,8 +18,8 @@ public class Calculadora implements CalculadoraI{
      * Constructor de Calculadora con parametros
      * @param baraja
      */
-	public Calculadora(Stack baraja) {
-		this.baraja=baraja;
+	public Calculadora() {
+		baraja = new StackVector();
 	}
         /**
          * metodo implementado de la clase CalculadoraI, reliza las operaciones y separaciones de escritura tipo postfix
